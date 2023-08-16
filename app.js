@@ -4,14 +4,14 @@ require('colors');
 //Importación paquetes desarrollados para App
 const statements = require('./modules/statements');
 
-console.clear();
-
-let nomApre = 'oRlanDO';
-let apeApre = 'CasTRO';
-let tipoDocu = ['TI', 'CC'];
-let numDocu = '1045256789'
 
 const main = async() => {
+
+    console.clear();
+
+    let nomApre = 'oRlanDO';
+    let apeApre = 'CasTRO';
+
 
     console.log('*******************************'.green);
     console.log('*     '.green,'Gestionar Textos'.bgGreen,'      *'.green);
@@ -31,15 +31,8 @@ const main = async() => {
     console.log('Nombre Completo: ' + statements.firstUpper(nomApre,apeApre));
 
     let nombreAprendiz = statements.firstUpper(nomApre,apeApre);
-    let i=0;
-    while (i<nombreAprendiz.length){
-        console.log(nombreAprendiz.substring(i));
-        i = i+1;
-    }
-
-    for (let i = 0; i < nombreAprendiz.length; i++) {
-        console.log(nombreAprendiz.substring(i));
-    }
+    
+    statements.quitarIzquierdaNombreCompleto(nomApre,apeApre);
 
     for (let i = (nombreAprendiz.length - 1) ; i >= 0; i--) {
         console.log(nombreAprendiz.substring(i));

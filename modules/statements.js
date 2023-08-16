@@ -24,9 +24,19 @@ const firstUpper = (a,b) => {
            b[0].toUpperCase() + b.substring(1).toLowerCase(); 
 }
 
+const quitarIzquierdaNombreCompleto = (a,b) => {
+    let i=0;
+    let nombreAprendiz = firstUpper(a,b)
+    while (i<nombreAprendiz.length){
+        console.log(nombreAprendiz.substring(i));
+        i = i+1;
+    }
+}
+
 statements.upperCase = upperCase;
 statements.lowerCase = lowerCase;
 statements.upperCaseSentence = upperCaseSentence;
 statements.lowerCaseSentence = lowerCaseSentence;
 statements.firstUpper = firstUpper;
+statements.quitarIzquierdaNombreCompleto = quitarIzquierdaNombreCompleto;
 module.exports = statements;
